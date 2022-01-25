@@ -1,5 +1,5 @@
-const getApiData = () => {
-  return fetch('http://hp-api.herokuapp.com/api/characters/house/gryffindor')
+const callToApi = (filterHouse) => {
+  return fetch(`http://hp-api.herokuapp.com/api/characters/house/${filterHouse}`)
     .then((response) => response.json())
     .then((data) => {
       const cleanData = data.map((character) => {
@@ -18,4 +18,4 @@ const getApiData = () => {
     })
 }
 
-export default getApiData;
+export default callToApi;
