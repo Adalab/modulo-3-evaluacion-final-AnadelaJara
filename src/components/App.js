@@ -11,7 +11,7 @@ import Filters from "./Filters";
 function App() {
   const [characters, setCharacters] = useState([]);
   const [filterName, setFilterName] = useState('');
-  const [filterHouse, setFilterHouse] = useState('');
+  const [filterHouse, setFilterHouse] = useState('gryffindor');
 
   useEffect(() => {
     callToApi(filterHouse).then((charactersData) => {
@@ -26,8 +26,6 @@ function App() {
     } else if (data.key === 'house') {
       setFilterHouse(data.value);
     }
-
-
   }
 
   const filteredCharacters = characters
@@ -35,12 +33,7 @@ function App() {
       return character.name.toLowerCase().includes(filterName.toLowerCase());
     })
     .filter((character) => {
-      // return
-      if (filterHouse === 'gryffindor') {
-        return true
-      } else {
-        return character.house === filterHouse;
-      }
+      return filterHouse === 'gryffindor' ? true : character.house === filterHouse;
     });
 
   return (

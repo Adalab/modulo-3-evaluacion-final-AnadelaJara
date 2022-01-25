@@ -2,7 +2,7 @@ const FilterHouse = (props) => {
   const handleChange = (ev) => {
     props.handleFilter({
       key: 'house',
-      value: ev.target.value,
+      value: ev.currentTarget.value,
     })
   }
   return (
