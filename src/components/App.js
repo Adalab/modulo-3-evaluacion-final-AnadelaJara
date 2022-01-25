@@ -1,6 +1,7 @@
 import "../styles/App.scss";
 import callToApi from '../services/api';
 import { useEffect, useState } from 'react';
+import CharacterList from "./CharacterList";
 
 // import { Route, Link } from 'react-router-dom';
 
@@ -31,17 +32,7 @@ function App() {
             </select>
           </form>
         </section>
-        <section>
-          <ul>
-            <li>
-              <img alt="imagen" />
-              <h2>Nombre</h2>
-              <h2>Especie</h2>
-            </li>
-          </ul>
-        </section>
-
-
+        <CharacterList characters={characters} />
       </main>
     </div>
   );

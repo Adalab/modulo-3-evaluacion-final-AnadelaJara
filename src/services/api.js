@@ -4,7 +4,7 @@ const getApiData = () => {
     .then((data) => {
       const cleanData = data.map((character) => {
         return {
-          // id: `${character.name} ${character.dateOfBirth}`,
+          id: `${character.name} ${character.actor}`,
           image: character.image,
           name: character.name,
           status: character.alive,
