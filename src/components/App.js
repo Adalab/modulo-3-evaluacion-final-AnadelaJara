@@ -1,9 +1,21 @@
 import "../styles/App.scss";
+import callToApi from '../services/api';
+import { useEffect, useState } from 'react';
+
 // import { Route, Link } from 'react-router-dom';
-// import { useEffect, useState } from 'react';
-// import callToApi from '../services/api';
+
+
 
 function App() {
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    callToApi()
+      .then((charactersData) => {
+        setCharacters(charactersData);
+      })
+  }, []);
+
   return (
     <div>
       <h1>Harry Potter</h1>
