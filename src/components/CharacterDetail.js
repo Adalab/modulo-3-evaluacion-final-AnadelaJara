@@ -32,8 +32,17 @@ const CharacterDetail = (props) => {
   };
 
   const getStatus = () => {
-    return props.character.status ? "Vivo" : " Muerto";
-  }
+    // return props.character.status ? "Vivo" : " Muerto";
+    if (props.character.status && props.character.gender === 'female') {
+      return 'Viva';
+    } else if (props.character.status && props.character.gender === 'male') {
+      return 'Vivo';
+    } else if (!props.character.status && props.character.gender === 'female') {
+      return 'Muerta';
+    } else if (!props.character.status && props.character.gender === 'male') {
+      return 'Muerto';
+    }
+  };
 
   return (
     <section>
