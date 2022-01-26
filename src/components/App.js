@@ -3,7 +3,7 @@ import "../styles/core/reset.scss";
 import "../styles/core/variables.scss";
 import callToApi from '../services/api';
 import { useEffect, useState } from 'react';
-import { Route, Switch, useRouteMatch, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";

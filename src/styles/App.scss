@@ -44,7 +44,7 @@ main {
 }
 
 .filterName {
-  color: #000;
+  color: #fff;
   font-weight: bold;
   background-color: #daa520;
   border-radius: 10px;
@@ -61,8 +61,8 @@ main {
     font-weight: bold;
     padding: 10px;
     border: none;
-    border: #daa520 2px solid;
-    background: #808080;
+    border: #daa520 3px solid;
+    background: #fff;
     border-radius: 10px;
     margin-bottom: 13px;
     @media (min-width: 768px) {
@@ -201,11 +201,11 @@ main {
     border-radius: 20%;
 
     @media (min-width: 768px) {
-      width: 180px;
+      width: 170px;
       height: 225px;
     }
     @media (min-width: 1200px) {
-      width: 200px;
+      width: 170px;
       height: 250px;
     }
   }
