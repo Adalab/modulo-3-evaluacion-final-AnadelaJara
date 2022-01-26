@@ -1,4 +1,5 @@
 import CharacterCard from "./CharacterCard";
+import CharacterDoesNotExist from "./CharacterDoesNotExist";
 
 const CharacterList = (props) => {
   const characterElements = props.characters
@@ -7,14 +8,23 @@ const CharacterList = (props) => {
         <CharacterCard character={character} />
       </li>
     })
-  return (
-    <section>
+  if (props.characters.length === 0) {
+    return <CharacterDoesNotExist />;
+  } else {
+    return (<section>
       <ul>
         {characterElements}
       </ul>
     </section>
-  )
-}
+    )
+  }
+};
+
 export default CharacterList;
 
-//character.id
+
+
+
+
+
+

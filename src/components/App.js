@@ -1,9 +1,9 @@
 import "../styles/App.scss";
 import callToApi from '../services/api';
 import { useEffect, useState } from 'react';
+import { Route, Switch, useRouteMatch, Link } from 'react-router-dom';
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
-import { Route, Switch, useRouteMatch, Link } from 'react-router-dom';
 import CharacterDetail from "./CharacterDetail";
 
 
