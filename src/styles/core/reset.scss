@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "HARRYP";
+  src: url(../../fonts/HARRYP__.TTF) format("truetype");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,5 +10,10 @@
   max-width: 100%;
   text-decoration: none;
   list-style-type: none;
+  // font-family: "HARRYP", sans-serif;
   font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
 }

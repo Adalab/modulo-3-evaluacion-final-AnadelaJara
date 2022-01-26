@@ -45,16 +45,22 @@ const CharacterDetail = (props) => {
   };
 
   return (
-    <section>
-      <Link to="/">Volver a la página principal</Link>
-      <img src={props.character.image === '' ? `https://via.placeholder.com/210x295/22222/fffff/?text=${props.character.name}` : props.character.image} alt={`Foto de ${props.character.name}`} title={`Foto de ${props.character.name}`} />
-      <h2>{props.character.name}</h2>
-      <p>{getStatus()}</p>
-      <p>{getSpecies()}</p>
-      <p>{getGender()}</p>
-      <p>{props.house}</p>
-      <p>{props.character.alternate_names}</p>
-    </section>
+    <section >
+      <div className="container__link">
+        <Link className="link__back" to="/">Volver</Link>
+      </div>
+      <div className="container__details">
+        <img className="container__details--img" src={props.character.image === '' ? `https://via.placeholder.com/210x295/22222/fffff/?text=${props.character.name}` : props.character.image} alt={`Foto de ${props.character.name}`} title={`Foto de ${props.character.name}`} />
+        <div className="container__details--text">
+          <h2>{props.character.name}</h2>
+          <p className="container__details--text__status">{getStatus()}</p>
+          <p className="container__details--text__status">{getSpecies()}</p>
+          <p className="container__details--text__status">{getGender()}</p>
+          <p className="container__details--text__status" > {props.character.house}</p >
+          <p className="container__details--text__status" > {props.character.alternate_names}</p >
+        </div >
+      </div >
+    </section >
   )
 }
 
