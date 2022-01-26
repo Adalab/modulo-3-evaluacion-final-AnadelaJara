@@ -7,8 +7,9 @@ const FilterHouse = (props) => {
   }
   return (
     <>
-      <label htmlFor="house">Selecciona la casa:</label>
+      <label className="filterHouse" htmlFor="house">Selecciona la casa:</label>
       <select name="house"
+        className="filterHouse__select"
         id="house"
         onChange={handleChange}
         value={props.filterHouse}

@@ -1,5 +1,192 @@
-@import "core/variables";
-@import "core/reset";
-@import "layout/header";
-@import "layout/main";
-@import "layout/footer";
+// @import "./core/variables";
+// @import "./core/reset";
+// @import "./layout/header.scss";
+// @import "./layout/main.scss";
+// @import "./layout/footer.scss";
+
+body {
+  background-image: url("../images/howards-phoenix.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #909090;
+}
+
+.header {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__logo {
+    width: 250px;
+    @media (min-width: 768px) {
+      width: 350px;
+    }
+    @media (min-width: 1200px) {
+      width: 450px;
+    }
+  }
+}
+main {
+  margin: 0px 20px;
+}
+
+.filter__container {
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.filterName {
+  color: #000;
+  font-weight: bold;
+  background-color: #daa520;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
+
+  @media (min-width: 1200px) {
+    font-size: 20px;
+  }
+  &__input {
+    width: 350px;
+    height: 30px;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border: #daa520 2px solid;
+    background: #808080;
+    border-radius: 10px;
+    margin-bottom: 13px;
+    @media (min-width: 768px) {
+      width: 450px;
+    }
+    @media (min-width: 1200px) {
+      width: 550px;
+    }
+  }
+}
+
+.filterHouse {
+  margin-top: 15px;
+  background-color: #daa520;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  @media (min-width: 1200px) {
+    font-size: 22px;
+  }
+  &__select {
+    width: 180px;
+    padding: 10px 20px;
+    font-size: 10px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    border: #daa520 2px solid;
+    background: #808080;
+    @media (min-width: 768px) {
+      width: 280px;
+    }
+    @media (min-width: 1200px) {
+      width: 380px;
+      padding: 15px;
+      font-size: 15px;
+    }
+  }
+}
+
+.character_container {
+  padding: 30px;
+
+  // @media all and (min-width: 768px) {
+  //   padding: 30px;
+  // }
+  @media all and(min-width:1200px) {
+    padding-right: 80px;
+  }
+}
+
+.character_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.imgCard {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20%;
+  margin: 10px;
+  @media (min-width: 768px) {
+    width: 180px;
+    height: 250px;
+  }
+  @media (min-width: 1200px) {
+    width: 200px;
+    height: 270px;
+  }
+}
+.containerDescription {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: black;
+  text-decoration: none;
+  // color: #daa520;
+  background-color: #daa520;
+  padding: 10px;
+  border-radius: 10px;
+
+  &__name {
+    font-size: 15px;
+  }
+  &__specie {
+    font-size: 10px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.container_donotexist {
+  margin-top: 50px;
+  font-size: 25;
+  text-align: center;
+  background-color: #daa520;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+// .footer {
+//   background-color: #daa520;
+//   text-align: center;
+//   font-weight: bold;
+//   bottom: 0;
+// }

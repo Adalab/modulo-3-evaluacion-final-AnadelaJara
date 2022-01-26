@@ -1,10 +1,14 @@
 import "../styles/App.scss";
+import "../styles/core/reset.scss";
+import "../styles/core/variables.scss";
 import callToApi from '../services/api';
 import { useEffect, useState } from 'react';
 import { Route, Switch, useRouteMatch, Link } from 'react-router-dom';
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
+import Footer from "./Footer";
+import Header from "./Header";
 
 
 
@@ -44,10 +48,10 @@ function App() {
 
   return (
     <div>
-      <h1>Harry Potter</h1>
+      <Header />
       <Switch>
         <Route path="/" exact>
-          <main>
+          <main className="main">
             <Filters handleFilter={handleFilter} filterName={filterName}
               filterHouse={filterHouse}
             />
@@ -58,6 +62,7 @@ function App() {
 
         </Route>
       </Switch>
+      <Footer />
     </div >
   );
 }

@@ -11,8 +11,8 @@ const CharacterList = (props) => {
   if (props.characters.length === 0) {
     return <CharacterDoesNotExist />;
   } else {
-    return (<section>
-      <ul>
+    return (<section className="character_container">
+      <ul className="character_list">
         {characterElements}
       </ul>
     </section>

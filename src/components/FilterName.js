@@ -7,8 +7,9 @@ const FilterName = (props) => {
   }
   return (
     <>
-      <label htmlFor="name">Busca por personaje:</label>
+      <label className="filterName" htmlFor="name">Busca por bruja o mago:</label>
       <input type="text"
+        className="filterName__input"
         name="name"
         id="name"
         onChange={handleInput}

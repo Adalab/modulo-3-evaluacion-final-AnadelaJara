@@ -26,10 +26,12 @@ const CharacterCard = (props) => {
     }
   };
   return (
-    <Link to={`/character/${props.character.id}`}>
-      <img src={props.character.image === '' ? `https://via.placeholder.com/210x295/22222/fffff/?text=${props.character.name}` : props.character.image} alt={`Foto de ${props.character.name}`} title={`Foto de ${props.character.name}`} />
-      <h2>{props.character.name}</h2>
-      <p>{getSpecies()}</p>
+    <Link to={`/character/${props.character.id}`} className="character__list">
+      <img className="imgCard" src={props.character.image === '' ? `https://via.placeholder.com/210x295/22222/fffff/?text=${props.character.name}` : props.character.image} alt={`Foto de ${props.character.name}`} title={`Foto de ${props.character.name}`} />
+      <div className="containerDescription">
+        <h3 className="containerDescription__name">{props.character.name}</h3>
+        <p className="containerDescription__specie">{getSpecies()}</p>
+      </div>
     </Link >
   )
 }
