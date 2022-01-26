@@ -3,8 +3,8 @@ import callToApi from '../services/api';
 import { useEffect, useState } from 'react';
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
-
-// import { Route, Link } from 'react-router-dom';
+import { Route, Switch, useRouteMatch, Link } from 'react-router-dom';
+import CharacterDetail from "./CharacterDetail";
 
 
 
@@ -17,7 +17,6 @@ function App() {
     callToApi(filterHouse).then((charactersData) => {
       setCharacters(charactersData);
     });
-    console.log(filterHouse);
   }, [filterHouse]);
 
   const handleFilter = (data) => {
@@ -31,21 +30,35 @@ function App() {
   const filteredCharacters = characters
     .filter((character) => {
       return character.name.toLowerCase().includes(filterName.toLowerCase());
-    })
-    .filter((character) => {
-      return filterHouse === 'gryffindor' ? true : character.house === filterHouse;
     });
+
+  const renderCharacterDetail = (props) => {
+    const routeId = parseInt(props.match.params.id);
+
+    const findCharacter = characters.find((character) => character.id === routeId);
+
+    return <CharacterDetail character={findCharacter} />;
+
+  }
+
 
   return (
     <div>
       <h1>Harry Potter</h1>
-      <main>
-        <Filters handleFilter={handleFilter} filterName={filterName}
-          filterHouse={filterHouse}
-        />
-        <CharacterList characters={filteredCharacters} />
-      </main>
-    </div>
+      <Switch>
+        <Route path="/" exact>
+          <main>
+            <Filters handleFilter={handleFilter} filterName={filterName}
+              filterHouse={filterHouse}
+            />
+            <CharacterList characters={filteredCharacters} />
+          </main>
+        </Route>
+        <Route path="/character/:id" render={renderCharacterDetail}>
+
+        </Route>
+      </Switch>
+    </div >
   );
 }
 

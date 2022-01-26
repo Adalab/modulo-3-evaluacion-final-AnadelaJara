@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const CharacterCard = (props) => {
   const getSpecies = () => {
     if (props.character.species === "human") {
@@ -25,11 +26,11 @@ const CharacterCard = (props) => {
     }
   };
   return (
-    <>
+    <Link to={`/character/${props.character.id}`}>
       <img src={props.character.image === '' ? `https://via.placeholder.com/210x295/22222/fffff/?text=${props.character.name}` : props.character.image} alt={`Foto de ${props.character.name}`} title={`Foto de ${props.character.name}`} />
       <h2>{props.character.name}</h2>
-      <h2>{getSpecies()}</h2>
-    </>
+      <p>{getSpecies()}</p>
+    </Link >
   )
 }
 export default CharacterCard;
