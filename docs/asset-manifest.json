@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "./static/css/main.f5928874.css",
+    "main.js": "./static/js/main.7b563fd3.js",
+    "static/media/hogwards-phoenix.png": "./static/media/hogwards-phoenix.cb8b21436d431f0f69c3.png",
+    "static/media/Logo-Hogwarts.png": "./static/media/Logo-Hogwarts.67547fd0f564fbd4bf85.png",
+    "static/media/gryffindor.png": "./static/media/gryffindor.7d5c59a961059c25baa4.png",
+    "static/media/ravenclaw.png": "./static/media/ravenclaw.a89db95ba74e66d98192.png",
+    "static/media/hufflepuff.png": "./static/media/hufflepuff.81ca825f9d6e17407206.png",
+    "static/media/slytherin.png": "./static/media/slytherin.7a3ff545ef82608ccd50.png",
+    "static/media/logo-gold.png": "./static/media/logo-gold.b4a2cea8048fdb597699.png",
+    "index.html": "./index.html",
+    "main.f5928874.css.map": "./static/css/main.f5928874.css.map",
+    "main.7b563fd3.js.map": "./static/js/main.7b563fd3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5928874.css",
+    "static/js/main.7b563fd3.js"
+  ]
+}
