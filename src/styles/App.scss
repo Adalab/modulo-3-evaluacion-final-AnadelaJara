@@ -5,7 +5,7 @@
 // @import "./layout/footer.scss";
 
 body {
-  background-image: url("../images/howards-phoenix.png");
+  background-image: url("../images/hogwards-phoenix.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -105,6 +105,27 @@ main {
       padding: 15px;
       font-size: 15px;
     }
+  }
+}
+
+.btn {
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  background-color: #daa520;
+  border-radius: 10px;
+  padding: 5px;
+  color: #7f1734;
+  border: #daa520 2px solid;
+  font-size: 12px;
+  font-weight: bold;
+  @media (min-width: 768px) {
+    width: 115px;
+    height: 40px;
+    font-size: 15px;
+  }
+  @media (min-width: 1200px) {
+    width: 125px;
   }
 }
 

@@ -45,6 +45,11 @@ function App() {
 
   }
 
+  const resetBtn = () => {
+    setFilterHouse('gryffindor');
+    setFilterName('');
+  }
+
 
   return (
     <div>
@@ -54,6 +59,8 @@ function App() {
           <main className="main">
             <Filters handleFilter={handleFilter} filterName={filterName}
               filterHouse={filterHouse}
+              resetBtn={resetBtn}
+
             />
             <CharacterList characters={filteredCharacters} />
           </main>
