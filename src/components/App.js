@@ -36,6 +36,7 @@ function App() {
       return character.name.toLowerCase().includes(filterName.toLowerCase());
     });
 
+
   const renderCharacterDetail = (props) => {
     const routeId = parseInt(props.match.params.id);
 
