@@ -3,7 +3,9 @@ import '../styles/layout/footer.scss';
 const Footer = () => {
   return (
     <footer>
-      {/* <p className="footer">&copy; Made in Howards by Ana de la Jara 2022</p> */}
+      <div>
+        <p className="footer">&copy; Made in Hogwards <i className="fas fa-hat-wizard"></i> by Ana de la Jara 2022 </p>
+      </div>
     </footer>
   )
 }

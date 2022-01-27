@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
-// import Shield from '../images/hogwards-shield.png'
+import Shield from '../images/Logo-Hogwarts.png';
+import Gryffindor from '../images/gryffindor.png';
+import Hufflepuff from '../images/hufflepuff.png';
+import Ravenclaw from '../images/ravenclaw.png';
+import Slytherin from '../images/slytherin.png';
+
+
 const CharacterDetail = (props) => {
 
   const getSpecies = () => {
@@ -44,6 +50,18 @@ const CharacterDetail = (props) => {
     }
   };
 
+  const getShield = () => {
+    if (props.character.house === 'Gryffindor') {
+      return Gryffindor;
+    } else if (props.character.house === 'Hufflepuff') {
+      return Hufflepuff;
+    } else if (props.character.house === 'Ravenclaw') {
+      return Ravenclaw;
+    } else if (props.character.house === 'Slytherin') {
+      return Slytherin;
+    }
+  };
+
   return (
     <section >
       <div className="container__link">
@@ -51,7 +69,7 @@ const CharacterDetail = (props) => {
       </div>
       <div className="container__details">
 
-        <img className="container__details--img" src={props.character.image !== "" ? props.character.image : 'https://1000marcas.net/wp-content/uploads/2020/02/Logo-Hogwarts.png'}
+        <img className="container__details--img" src={props.character.image !== "" ? props.character.image : Shield}
           alt={`Foto de ${props.character.name}`}
           title={`Foto de ${props.character.name}`}
         />
@@ -62,6 +80,12 @@ const CharacterDetail = (props) => {
           <p className="container__details--text__status">{getGender()}</p>
           <p className="container__details--text__status" > {props.character.house}</p >
           <p className="container__details--text__status" > {props.character.alternate_names}</p >
+          <img
+            className="shield"
+            src={getShield()}
+            alt={`Escudo de la casa ${props.character.house}`}
+            title={`Escudo de la casa ${props.character.house}`}
+          />
         </div >
       </div >
     </section >

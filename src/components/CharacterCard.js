@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Shield from '../images/Logo-Hogwarts.png'
 const CharacterCard = (props) => {
   const getSpecies = () => {
     if (props.character.species === "human") {
@@ -27,7 +28,7 @@ const CharacterCard = (props) => {
   };
   return (
     <Link to={`/character/${props.character.id}`} className="character__list">
-      <img className="imgCard" src={props.character.image !== "" ? props.character.image : 'https://1000marcas.net/wp-content/uploads/2020/02/Logo-Hogwarts.png'}
+      <img className="imgCard" src={props.character.image !== "" ? props.character.image : Shield}
         alt={`Foto de ${props.character.name}`}
         title={`Foto de ${props.character.name}`}
       />
